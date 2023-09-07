@@ -1,0 +1,65 @@
+{{!-- Modal para Modificar Un Producto --}}
+
+<div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="tituloCrear">Modificar Producto</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+            <form id="formUpdate">
+        <div>
+            <label for="idUpdate" class="px-2">ID</label>
+        </div>
+        <div>
+            <input class="form-control m-2" type="text" name="id" id="idUpdate" disabled>
+        </div>
+
+        <div>
+            <label for="nombreUpdate" class="px-2">Nombre</label>
+        </div>
+        <div>
+            <input class="form-control m-2" type="text" name="nombre" id="nombreUpdate" required>
+        </div>
+
+        <div>
+            <label for="descripcionUpdate" class="px-2 pt-2">Descripción</label>
+        </div>
+        <div>
+            <input  class="form-control m-2" type="text" name="descripcion" id="descripcionUpdate" required>
+        </div>
+
+        <div>
+            <label  for="precioUpdate" class="px-2 pt-2">Precio</label>
+        </div>
+        <div>
+            <input class="form-control m-2" type="number" name="precio" id="precioUpdate" required>
+        </div>
+
+        <div>
+            <label for="stockUpdate" class="px-2 pt-2">Stock</label>
+        </div>
+        <div>
+            <input class="form-control m-2 " type="number" name="stock" id="stockUpdate" required>
+        </div>
+
+        <div>
+            <label for="imagenUpdate" class="px-2 pt-2">Imagen</label>
+        </div>
+        <div>
+            <input class="form-control m-2" type="file" name="imagen" id="imagenUpdate">
+        </div>
+
+        <div>
+            <button class="btn btn-success m-2" type="submit">Modificar Producto</button>
+        </div>
+
+    </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>

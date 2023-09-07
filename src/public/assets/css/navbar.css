@@ -1,0 +1,16 @@
+nav .active{
+    font-weight: 800;
+}
+
+#iconoCarrito {
+    width: 17px;
+    height: 17px;
+    background-color: #007bff; 
+    border-radius: 50%; 
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: #fff; 
+    font-size: 14px; 
+    text-align: center;
+}

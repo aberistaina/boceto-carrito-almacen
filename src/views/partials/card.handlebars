@@ -1,0 +1,22 @@
+{{!-- Card para mostrar productos en vista HOME --}}
+
+<link rel="stylesheet" href="../../public/assets/css/card.css">
+
+<div class="row d-flex justify-content-between" id="card">
+{{#each productos}}
+<div class="card col-4 my-2 mt-4" style="width: 18rem;">
+  <img src="../../public/assets/uploads/{{this.imagen}}" class="card-img-top pt-3" alt="Imagen del Producto" style="height: calc(80% - 1.25rem);">
+  <div class="card-body ">
+    <div>
+        <h5 class="card-title pt-2 text-center"><b>{{this.nombre}}</b></h5>
+        <p class="card-text pt-2">{{this.descripcion}}</p>
+        <p class="card-text pt-2"><b>Precio:</b> {{formatMoney this.precio}}</p>
+        <p class="card-text"><b>Stock:</b> {{this.stock}}</p>   
+    </div>
+    <div class="comprar-btn botonAdd">
+        <button class="btn btn-primary agregar" data-bs-toggle="modal" data-bs-target="#carrito" data-id="{{this.id}}" data-nombre="{{this.nombre}}" data-precio="{{this.precio}}"><i class="bi bi-basket"></i> Comprar</button>
+    </div>
+  </div>
+</div>
+{{/each}}
+</div>

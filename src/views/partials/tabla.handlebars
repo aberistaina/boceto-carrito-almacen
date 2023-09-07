@@ -1,0 +1,70 @@
+{{!-- Tabla vista Productos --}}
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
+<table class="table table table-hover table-info table-striped mt-4 pt-4 tableCrud">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Stock</th>
+      <th scope="col">Modificar</th>
+      <th scope="col">Eliminar</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each productos}}
+    <tr>
+      <th scope="row" class="ps-4">{{this.id}}</th>
+      <td class="ps-3">{{this.nombre}}</td>
+      <td class="ps-3">{{formatMoney this.precio}}</td>
+      <td class="ps-4">{{this.stock}}</td>
+      <td class="ps-3"><button class="btn btn-success modificar" data-bs-toggle="modal" data-bs-target="#updateModal" data-id="{{this.id}}"><i class="bi bi-pencil-square"></i> Editar</button></td>
+      <td class="ps-3"><button class="btn btn-danger eliminar"  data-id="{{this.id}}" data-name="{{this.nombre}}" data-ruta="{{this.imagen}}" ><i class="bi bi-trash-fill"></i> Eliminar</button></td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+
+<script>
+  $(document).ready(function () {
+    $('.tableCrud').DataTable({
+      "language": {
+        "sProcessing": "Procesando...",
+        "sLengthMenu": "Mostrar _MENU_ registros",
+        "sZeroRecords": "No se encontraron resultados",
+        "sEmptyTable": "Ningún dato disponible en esta tabla",
+        "sInfo": "",
+        "sInfoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+        "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
+        "sInfoPostFix": "",
+        "sSearch": "Buscar:",
+        "sUrl": "",
+        "sInfoThousands": ",",
+        "sLoadingRecords": "Cargando...",
+        "oPaginate": {
+          "sFirst": "Primero",
+          "sLast": "Último",
+          "sNext": "Siguiente",
+          "sPrevious": "Anterior"
+        },
+        "oAria": {
+          "sSortAscending": ": Activar para ordenar la columna de manera ascendente",
+          "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+        }
+      },
+      "columns": [
+        { "searchable": false, "orderable": true},
+        { "searchable": true, "orderable": true },  
+        { "searchable": false, "orderable": true}, 
+        { "searchable": false, "orderable": true},
+        { "searchable": false, "orderable": false},
+        { "searchable": false, "orderable": false},
+      ]
+    });
+  });
+</script>

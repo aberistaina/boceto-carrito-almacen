@@ -1,0 +1,58 @@
+{{!-- Modal para Crear Un Producto --}}
+
+<div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="tituloCrear">Crear Un Producto</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+            <form id="formCreate">
+        <div>
+            <label for="nombre" class="px-2">Nombre</label>
+        </div>
+        <div>
+            <input class="form-control m-2" type="text" name="nombre" id="nombre" required>
+        </div>
+
+        <div>
+            <label for="descripcion" class="px-2 pt-2">Descripción</label>
+        </div>
+        <div>
+            <input  class="form-control m-2" type="text" name="descripcion" id="descripcion" required>
+        </div>
+
+        <div>
+            <label  for="precio" class="px-2 pt-2">Precio</label>
+        </div>
+        <div>
+            <input class="form-control m-2" type="numbre" name="precio" id="precio" required>
+        </div>
+
+        <div>
+            <label for="stock" class="px-2 pt-2">Stock</label>
+        </div>
+        <div>
+            <input class="form-control m-2 " type="numbre" name="stock" id="stock" required>
+        </div>
+
+        <div>
+            <label for="imagen" class="px-2 pt-2">Imagen</label>
+        </div>
+        <div>
+            <input class="form-control m-2" type="file" name="imagen" id="imagen" required>
+        </div>
+
+        <div>
+            <button class="btn btn-success m-2" type="submit">Crear Producto</button>
+        </div>
+
+    </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>

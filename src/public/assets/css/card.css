@@ -1,0 +1,16 @@
+.card-body{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 75%;
+}
+
+.comprar-btn{
+
+    display: flex !important;
+    justify-content: center !important;
+}
+
+
+

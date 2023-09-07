@@ -1,0 +1,14 @@
+<script defer src="../public//assets/js/crud.js"></script>
+<h1 class="text-center py-3"> CRUD Productos</h1>
+
+<div class="d-flex justify-content-between"> 
+<button class="btn btn-success modificar m-4" id="botonUpdate" data-bs-toggle="modal" data-bs-target="#createModal"><i class="bi bi-plus-circle"></i> Crear Producto</button>
+</div>
+{{>tabla}}
+
+{{>modalCreate}}
+{{>modalUpdate}}
+{{>carrito}}
+
+
+
